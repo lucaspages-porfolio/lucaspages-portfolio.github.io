@@ -11,9 +11,9 @@
   --tint-c: #E9DAD4;
   --tint-d: #DEDCE8;
 
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Montserrat', sans-serif;
+--font-body: 'Montserrat', sans-serif;
+  --font-mono: 'Josefin Sans', sans-serif;
 
   --gutter: 6vw;
 }
