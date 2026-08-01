@@ -334,11 +334,30 @@ section { padding: 0 var(--gutter); }
   color: var(--signal);
 }
 
-.about__skills-list {
+.about__skills-groups {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.5rem;
-  font-size: 0.9rem;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.about__skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.about__skills-group-name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.about__skills-group-items {
+  font-size: 0.92rem;
+  color: var(--grey);
 }
 
 @media (max-width: 720px) {
