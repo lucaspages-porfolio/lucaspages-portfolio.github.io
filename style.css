@@ -160,8 +160,13 @@ section { padding: 0 var(--gutter); }
     justify-self: end;
     text-align: right;
     margin-top: 0;
-    max-width: 30ch;
+    max-width: 40ch;
   }
+}
+
+/* Assez de place au-delà de 1300px pour mettre le nom sur une seule ligne */
+@media (min-width: 1300px) {
+  .hero__break { display: none; }
 }
 
 /* ---------- Work list ---------- */
@@ -536,4 +541,3 @@ section { padding: 0 var(--gutter); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
-
