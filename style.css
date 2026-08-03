@@ -141,32 +141,14 @@ section { padding: 0 var(--gutter); }
   color: var(--grey);
 }
 
-/* Grands écrans : le rôle vient occuper l'espace à droite du nom
-   plutôt que de laisser un grand vide, aligné sur sa base */
+/* Grands écrans : le nom passe sur une seule ligne (retour à la ligne
+   automatique si jamais ça ne tient pas), et le texte de rôle en dessous
+   s'étale sur une largeur bien plus généreuse */
 @media (min-width: 1000px) {
-  .hero {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 3rem;
-    grid-template-areas:
-      "eyebrow eyebrow"
-      "title   role";
-    align-items: end;
-  }
-  .hero__eyebrow { grid-area: eyebrow; margin-bottom: 2rem; }
-  .hero__title { grid-area: title; }
-  .hero__role {
-    grid-area: role;
-    justify-self: end;
-    text-align: right;
-    margin-top: 0;
-    max-width: 40ch;
-  }
-}
-
-/* Assez de place au-delà de 1300px pour mettre le nom sur une seule ligne */
-@media (min-width: 1300px) {
   .hero__break { display: none; }
+  .hero__role {
+    max-width: 62ch;
+  }
 }
 
 /* ---------- Work list ---------- */
