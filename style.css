@@ -141,6 +141,29 @@ section { padding: 0 var(--gutter); }
   color: var(--grey);
 }
 
+/* Grands écrans : le rôle vient occuper l'espace à droite du nom
+   plutôt que de laisser un grand vide, aligné sur sa base */
+@media (min-width: 1000px) {
+  .hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 3rem;
+    grid-template-areas:
+      "eyebrow eyebrow"
+      "title   role";
+    align-items: end;
+  }
+  .hero__eyebrow { grid-area: eyebrow; margin-bottom: 2rem; }
+  .hero__title { grid-area: title; }
+  .hero__role {
+    grid-area: role;
+    justify-self: end;
+    text-align: right;
+    margin-top: 0;
+    max-width: 30ch;
+  }
+}
+
 /* ---------- Work list ---------- */
 .work {
   padding-top: 6rem;
@@ -275,6 +298,15 @@ section { padding: 0 var(--gutter); }
   .project--reverse .project__detail {
     order: initial;
   }
+  .work {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact {
+    padding-top: 4rem;
+  }
 }
 
 /* ---------- About ---------- */
@@ -378,14 +410,8 @@ section { padding: 0 var(--gutter); }
 }
 
 @media (max-width: 720px) {
-  .about {
-    grid-template-columns: 1fr;
-    padding-bottom: 3rem;
-  }
+  .about { grid-template-columns: 1fr; }
   .about__portrait { max-width: 220px; }
-  .contact {
-    padding-top: 4rem;
-  }
 }
 
 /* ---------- Contact ---------- */
@@ -510,3 +536,4 @@ section { padding: 0 var(--gutter); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
